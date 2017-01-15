@@ -1,0 +1,20 @@
+---
+- name: install Debian lsb-release
+  apt:
+    name: lsb-release
+    state: latest
+  tags:
+    - lsb-release
+    - lsb
+
+- name: install APT tools dependencies
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - aptitude
+    - apt-transport-https
+    - curl
+    - ca-certificates
+    - wget
+    - sudo

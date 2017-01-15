@@ -1,0 +1,5 @@
+---
+- include: redhat_dependencies.yml
+# - include: redhat_repositories.yml
+# - include: redhat_update.yml
+# - include: redhat_packages.yml

@@ -1,0 +1,8 @@
+---
+- name: install RedHat lsb-release
+  yum:
+    name: redhat-lsb
+    state: latest
+  tags:
+    - lsb-release
+    - lsb
