@@ -92,8 +92,6 @@ apt_sources_lists_extra: []
     #             url:
     #             packages: []
     #             section:  # default ansible_distribution_release
-    #             section_prefix:
-    #             section_suffix:
     #             archs: []
     #             key_server:
     #             key_url:
