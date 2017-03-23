@@ -137,6 +137,7 @@ apt_default_packages:
   - diffutils
   - colordiff
   - patch
+  - jq
 
 # list of extra packages to install
 apt_extra_packages: []
