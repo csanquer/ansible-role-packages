@@ -108,7 +108,6 @@ apt_upgrade: false
 apt_default_packages:
   - vim
   - tree
-  - ack-grep
   - git
   - bash-completion
   - build-essential
