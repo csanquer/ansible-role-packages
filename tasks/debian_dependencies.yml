@@ -1,21 +1,22 @@
 ---
 - name: install Debian lsb-release
   apt:
-    name: lsb-release
-    state: latest
+    name:
+      - lsb-release
+    state: "{{ packages_dependencies_state }}"
   tags:
     - lsb-release
     - lsb
 
 - name: install APT tools dependencies
   apt:
-    name: "{{ item }}"
-    state: latest
-  with_items:
-    - aptitude
-    - debian-archive-keyring
-    - apt-transport-https
-    - curl
-    - ca-certificates
-    - wget
-    - sudo
+    name:
+      - aptitude
+      - debian-archive-keyring
+      - apt-transport-https
+      - curl
+      - ca-certificates
+      - wget
+      - sudo
+    state: "{{ packages_dependencies_state }}"
+

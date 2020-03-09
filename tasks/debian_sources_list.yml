@@ -25,9 +25,9 @@
 
 - name: get default repositories keys
   apt_key:
-    keyserver: "{{ item.1.key_server|default(omit)}}"
-    id: "{{ item.1.key_id|default(omit)}}"
-    url: "{{ item.1.key_url|default(omit)}}"
+    keyserver: "{{ item.1.key_server|default(omit) }}"
+    id: "{{ item.1.key_id|default(omit) }}"
+    url: "{{ item.1.key_url|default(omit) }}"
     state: present
   when: ansible_distribution|lower == item.0.distrib|lower and item.1.enabled|default(false) and (item.1.key_server is defined or item.1.key_url is defined or item.1.key_id is defined)
   with_subelements:
@@ -36,9 +36,9 @@
 
 - name: get extra repositories keys
   apt_key:
-    keyserver: "{{ item.1.key_server|default(omit)}}"
-    id: "{{ item.1.key_id|default(omit)}}"
-    url: "{{ item.1.key_url|default(omit)}}"
+    keyserver: "{{ item.1.key_server|default(omit) }}"
+    id: "{{ item.1.key_id|default(omit) }}"
+    url: "{{ item.1.key_url|default(omit) }}"
     state: present
   when: ansible_distribution|lower == item.0.distrib|lower and item.1.enabled|default(false) and (item.1.key_server is defined or item.1.key_url is defined or item.1.key_id is defined)
   with_subelements:

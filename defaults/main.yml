@@ -1,4 +1,6 @@
 ---
+packages_dependencies_state: present
+
 apt_sources_replace: true
 
 apt_sources_lists_default:

@@ -2,7 +2,7 @@
 - name: install RedHat lsb-release
   yum:
     name: redhat-lsb
-    state: latest
+    state: "{{ packages_dependencies_state }}"
   tags:
     - lsb-release
     - lsb
